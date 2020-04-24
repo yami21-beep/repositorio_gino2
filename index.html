@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GinoPascalli</title>
+
+    <!--ICONOS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--SLIDER-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <!--ESTILOS-->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<script>
+    function mostrarPestana(n) {
+        var items = document.getElementsByClassName("panels_item");
+
+        for (i = 0; i < items.length; i++) {
+            if (items[i].className.includes("p_activa")) {
+                items[i].className = items[i].className.replace("p_activa", "");
+                break;
+            }
+        }
+
+        items[n].className += " p_activa";
+    }
+</script>
+
+<body>
+    <div class="tabs - container">
+        <div class="header - inner">
+            <a href="index.html" id="logo" class="logo"></a>
+            <img src="IMG/logo.png" alt="logo GinoPascalli">
+            <nav>
+                <ul id="tabs">
+                    <li class="tabs__item">
+                        <a href="#" onclick="mostrarPestana(0);">Home</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#" onclick="mostrarPestana(1);">Colecciones</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#" onclick="mostrarPestana(2);">Tiendas</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#" onclick="mostrarPestana(3);">Regístrate</a>
+                    </li>
+                    <li class="tabs__item">
+                        <a href="#" onclick="mostrarPestana(4);">Condiciones</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+    <div class="panels">
+        <div class="panels_item p_activa">
+            <ul class="slide1">
+                <li> <img src="IMG/sliders/slide1.jpg" alt="slider1"> </li>
+                <li> <img src="IMG/sliders/slide2.jpg" alt="slider2"> </li>
+                <li> <img src="IMG/sliders/slide3.jpg" alt="slider3"> </li>
+                <li> <img src="IMG/sliders/slide4.jpg" alt="slider4"> </li>
+                <li> <img src="IMG/sliders/slide5.jpg" alt="slider5"> </li>
+
+            </ul>
+        </div>
+
+        <div class="panels_item">
+            <div class="variasimg">
+                <img src="IMG/colections/colect1.jpg">
+                <img src="IMG/colections/colect2.jpg">
+                <img src="IMG/colections/colect3.jpg">
+                <img src="IMG/colections/colect4.jpg">
+            </div>
+        </div>
+
+        <div class="panels_item">
+            <div class="variasimg">
+                <img src="IMG/tienda1.jpg">
+                <img src="IMG/tienda2.jpg">
+                <img src="IMG/tienda3.jpg">
+                <img src="IMG/tienda4.jpg">
+            </div>
+        </div>
+
+        <div class="panels_item">
+            <section class="registro">
+                <h4>Formulario de registro</h4>
+                <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
+                <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese sus apellidos">
+                <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+                <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su contraseña">
+                <input class="botons" type="submit" value="Registrar">
+
+            </section>
+        </div>
+
+        <div class="panels_item">
+            <div class="condiciones">
+                <img src="IMG/condiciones.jpg">
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <div class="redes">
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/gino.passcalli.77" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
+                    <a href="https://twitter.com/ginopasscalli" target="_blank">
+                        <i class="fa fa-twitter-square"></i>
+                    </a>
+                    <a href="https://www.youtube.com/user/GinoPasscalli" target="_blank">
+                        <i class="fa fa-youtube-square"></i>
+                    </a>
+                    <a href="https://www.instagram.com/almacenesginopasscalli/?hl=es-la" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <!--SCRIPTS-->
+    <script>
+        $(document).ready(function() {
+            $('.slide1').bxSlider({
+                mode: 'fade',
+            })
+
+            $('.slide2').bxSlider({
+                mode: 'fade',
+            })
+
+            $('.slide3').bxSlider({
+                mode: 'fade',
+            })
+
+            $('.slide4').bxSlider({
+                mode: 'fade',
+            })
+
+            $('.slide5').bxSlider({
+                mode: 'fade',
+            });
+
+        });
+    </script>
+</body>
+
+</html>
